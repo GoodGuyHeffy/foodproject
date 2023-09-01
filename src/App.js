@@ -1,22 +1,28 @@
 import React from'react';
-import NavBar from './components/NavBar';
-import Hero from './components/Hero';
-import MainCards from './components/MainCards';
-import Food from './components/Food';
-import Category from './components/Category';
-
+import { Route, Routes } from 'react-router-dom';
+import Cart from './pages/Cart';
+import Home from './pages/Home';
+import Favorites from './pages/Favorites';
+import { CartProvider } from './Context/CartContext';
+import Food from './pages/Food';
+import Deals from './pages/Deals';
+import Locations from './pages/Locations';
 
 function App() {
 
   return (
 
     <div>
-      <NavBar />
-      <Hero />
-      <MainCards />
-      <Food />
-      <Category />
-     
+       <CartProvider>
+     <Routes>
+       <Route path='/' element={<Home />} />
+       <Route path='/cart' element={<Cart />} />
+       <Route path='/favorites' element={<Favorites />} />
+       <Route path='/food' element={<Food />} />
+       <Route path='/deals' element={<Deals />} />
+       <Route path='/locations' element={<Locations />} />
+     </Routes>
+     </CartProvider>
     </div>
   );
 }
