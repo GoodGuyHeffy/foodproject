@@ -8,7 +8,9 @@ function Cart() {
 
 
   const { cartItems, getCartTotal, removeFromCart} = useContext(CartContext);
-
+  const handleClick = () => {
+    alert('I wish you could homie')
+  }
 
 console.log(cartItems);
   return (
@@ -16,7 +18,7 @@ console.log(cartItems);
         <NavBar />
         <div className='flex flex-col justify-center mt-28 md:mt-40 w-full h-full'>
           
-            <h1 className='flex justify-center text-2xl md:text-4xl pb-2 font-bold text-blue-500'>Your Cart Items</h1>
+            <h1 className='flex justify-center text-2xl md:text-4xl pb-2 font-bold text-blue-900'>Your Cart Items</h1>
             
           
      {
@@ -31,7 +33,7 @@ console.log(cartItems);
                    
                     
                    
-                      <button onClick={() => removeFromCart(item)} className='bg-thBlue text-black mx-2 p-2 my-2 rounded-xl hover:scale-105 duration-300 hover:bg-blue-500 hover:text-white hover:border-none'>Remove from Cart</button>
+                      <button onClick={() => removeFromCart(item)} className=' text-white mx-2 p-2 my-2 rounded-xl hover:scale-105 duration-300 bg-blue-900 hover:border-none'>Remove from Cart</button>
                       
                 </div>
                 
@@ -40,13 +42,13 @@ console.log(cartItems);
         ))}
         <div className='flex justify-center items-center font-bold text-thBlue py-12 mx-6 '>
             <p className='px-8 text-xl md:text-2xl md:mx-12 text-black'> CART TOTAL: <span className='text-black'>${getCartTotal()}</span></p>
-            <Link to='/'><button className='px-4 py-2 bg-thBlue text-black rounded-xl hover:scale-105 duration-300 md:mx-12 hover:bg-blue-500 hover:text-white hover:border-none'>Check Out</button></Link>
+            <Link to='/'><button onClick={handleClick} className='px-4 py-2 bg-thBlue text-black rounded-xl hover:scale-105 duration-300 md:mx-12 hover:bg-blue-500 hover:text-white hover:border-none'>Check Out</button></Link>
           </div>
           </div>
           
       ) : (
        <div className='flex flex-col justify-center items-center'>
-        <h1 className=" flex text-3xl md:text-7xl font-bold justify-center items-center mt-24 text-blue-500 p-6 pb-12">Your cart is empty</h1>
+        <h1 className=" flex text-3xl md:text-7xl font-bold justify-center items-center mt-24 text-blue-900 p-6 pb-12">Your cart is empty</h1>
         <Link to="/"><CoolButton className="" /></Link>
         </div>
       )

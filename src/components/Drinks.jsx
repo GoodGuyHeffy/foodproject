@@ -48,7 +48,7 @@ function Drinks() {
 
       </div>
 
-    {/* Display Food images */}
+    {/* Display drink images */}
       <div className='grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4'>
         {drinks.map((item, index)=> (
             <div className='border shadow-lg hover:scale-105 duration-300 rounded-lg relative' key={index}>
@@ -57,7 +57,7 @@ function Drinks() {
                 <p className='font-bold pb-2 mb-2 text-sm md:text-xl'>{item.name}</p>
                 <div className='w-full flex justify-between absolute bottom-0 p-2'>
                 <p><span className='text-black font-bold text-xl p-1 rounded-full'>${item.price}</span></p>
-                <BsFillCartFill onClick={() => addToCart(item)} className='hover:text-blue-500 hover:scale-105 duration-300 cursor-pointer' size={25}/>
+                <BsFillCartFill onClick={() => addToCart(item)} className='hover:text-blue-900 hover:scale-105 duration-300 cursor-pointer' size={22}/>
                 </div>
             </div>
         </div>

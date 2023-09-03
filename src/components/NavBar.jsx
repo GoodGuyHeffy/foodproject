@@ -39,28 +39,29 @@ function NavBar() {
 
         <div>
           {toggle ? (<div className='hidden lg:flex items-center bg-gray-200 rounded-full p-1 text-[14px]'>
-              <button  className='bg-blue-500 border-none text-white rounded-full p-2'>Delivery</button>
+              <button  className='bg-blue-900 border-none text-white rounded-full p-2'>Delivery</button>
               <button onClick={toggleDelivery} className='p-2 border-none duration-300'>Pickup</button>
             </div>) : (<div className='hidden lg:flex items-center bg-gray-200 rounded-full p-1 text-[14px]'>
               <button onClick={togglePickup} className='p-2 border-none duration-300'>Delivery</button>
-              <button className='p-2 bg-blue-500 border-none text-white rounded-full'>Pickup</button>
+              <button className='p-2 bg-blue-900 border-none text-white rounded-full'>Pickup</button>
             </div>)}
             
         </div>
 
       </div>
 
-      {/* Search input */}
+       {/* Search input 
  
        <div className='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
         <AiOutlineSearch size={25} onClick={() => setNav(!nav)}/>
         <input className='bg-transparent p-2 focus:outline-none w-full' type="text" placeholder='Search Coffee'>
         </input>
        </div>
-         
+         */}
+
          {/* Cart Button */}
 
-         <Link to='/cart'><button className='bg-black text-white hidden md:flex items-center py-2 rounded-full hover:bg-blue-500 border-none'>
+         <Link to='/cart'><button className='bg-black text-white hidden md:flex items-center py-2 rounded-full hover:bg-blue-900 border-none hover:scale-105 duiration-300'>
             <BsFillCartFill size={20} className='mr-2'/> {cartItems.length}
          </button></Link>
 

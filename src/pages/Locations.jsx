@@ -14,6 +14,7 @@ function Locations() {
         <p className='text-4xl md:text-5xl justify-center items-center mx-auto px-4'>Smith Bros.</p>
         <p className='text-4xl md:text-5xl justify-center items-center mx-auto px-4'>Coffee House</p>
         <p className='font-bold text-sm md:text-base'>100 N Franklin St, Port Washington, WI</p>
+        <p className='font-bold text-sm md:text-base'>Open Mon-Sat 8am-8pm</p>
         </div>
         <div className='mx-2 p-4 text-xl'>
           <p>Anyone in Port Washington old enough to remember the old Smith Bros. Fish Shanty Restaurant will remember the crowds of locals and tourists that came by the busloads to eat there for decades.
@@ -25,9 +26,12 @@ function Locations() {
       <div>
         <img className='w-full h-[300px] md:h-[450px] object-cover' src={MapImg} alt="/"/>
       </div>
-      <div className='grid grid-cols-1 md:flex md:justify-between bg-slate-200 md:pb-12'>
+      <div className='grid grid-cols-1 md:flex md:justify-around bg-slate-200 md:pb-12'>
         <div className='px-4 justify-center items-center flex'>
           <p className='text-base md:text-3xl md:px-6 md:py-4'>100 N Franklin St, Port Washington, WI <br /><span className='flex justify-center items-center'>United States, 53074</span></p>
+        </div>
+        <div className='px-4 justify-center items-center flex'>
+          <p className='text-base p-2 md:text-3xl'>Open Mon-Sat 8am-8pm</p>
         </div>
         <div className='px-4 justify-center items-center flex'>
           <p className='text-base p-2 md:text-3xl'>+1 262-268-2767</p>
